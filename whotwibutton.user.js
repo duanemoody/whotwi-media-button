@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name 		Whotwi media link for Twitter
-// @version 	0.8
+// @version 	0.81
 // @license       MIT
 // @description	Adds whotwi media link to a Twitter user profile page
 // @include		https://twitter.com/*
@@ -10,7 +10,7 @@
 // @exclude       https://mobile.twitter.com/home
 // @exclude       https://mobile.twitter.com/home/*
 // @grant    	none
-// @run-at        document-idle
+// @run-at        document-end
 // @updateURL     https://raw.githubusercontent.com/duanemoody/whotwi-media-button/main/whotwibutton.user.js
 // @downloadURL   https://raw.githubusercontent.com/duanemoody/whotwi-media-button/main/whotwibutton.user.js
 // @supportURL    https://github.com/duanemoody/whotwi-media-button/issues
