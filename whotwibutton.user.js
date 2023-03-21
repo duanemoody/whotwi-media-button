@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name 		Whotwi media link for Twitter
-// @version 	0.77
+// @version 	0.78
 // @license       MIT
 // @description	Adds whotwi media link to a Twitter user profile page
 // @include		https://twitter.com/*
