@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name 		Whotwi media link for Twitter
-// @version 	0.81
+// @version 	0.82
 // @license       MIT
 // @description	Adds whotwi media link to a Twitter user profile page
-// @include		https://twitter.com/*
-// @include		https://mobile.twitter.com/*
+// @match		https://twitter.com/*
+// @match		https://mobile.twitter.com/*
 // @exclude       https://twitter.com/home
 // @exclude       https://twitter.com/home/*
 // @exclude       https://mobile.twitter.com/home
@@ -23,8 +23,8 @@ function DOM_ContentReady() {
       console.log('DCR started');
       // Get userid
       // this method will only work for profile pages, not popup profiles 
-      const username = location.pathname.split('/')[1], 
-            buttonboxclass = "css-1dbjc4n r-obd0qt r-18u37iz r-1w6e6rj r-1h0z5md r-dnmrzs", 
+      const username = location.pathname.split('/')[1],
+            buttonboxclass = "css-1dbjc4n r-obd0qt r-18u37iz r-1w6e6rj r-1h0z5md r-dnmrzs",
             buttonbox = document.getElementsByClassName(buttonboxclass)[0];
 
       // Get destination
