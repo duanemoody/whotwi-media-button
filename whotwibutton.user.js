@@ -5,6 +5,10 @@
 // @description	Adds whotwi media link to a Twitter user profile page
 // @include		https://twitter.com/*
 // @include		https://mobile.twitter.com/*
+// @exclude       https://twitter.com/home
+// @exclude       https://twitter.com/home/*
+// @exclude       https://mobile.twitter.com/home
+// @exclude       https://mobile.twitter.com/home/*
 // @grant    	none
 // @updateURL     https://raw.githubusercontent.com/duanemoody/whotwi-media-button/main/whotwibutton.user.js
 // @downloadURL   https://raw.githubusercontent.com/duanemoody/whotwi-media-button/main/whotwibutton.user.js
@@ -14,21 +18,19 @@
 
 // Get userid
 // this method will only work for profile pages, not popup profiles 
-const username = location.pathname.split('/')[1];
-if (username != 'home') {
-      const buttonboxclass = "css-1dbjc4n r-obd0qt r-18u37iz r-1w6e6rj r-1h0z5md r-dnmrzs", 
-            buttonbox = document.getElementsByClassName(buttonboxclass)[0];
+const username = location.pathname.split('/')[1], 
+      buttonboxclass = "css-1dbjc4n r-obd0qt r-18u37iz r-1w6e6rj r-1h0z5md r-dnmrzs", 
+      buttonbox = document.getElementsByClassName(buttonboxclass)[0];
 
-      // Get destination
-      const whotwi = `https://en.whotwi.com/${username}/tweets/media#local_local_menu`;
+// Get destination
+const whotwi = `https://en.whotwi.com/${username}/tweets/media#local_local_menu`;
 
-      // Create link
-      const whobut = document.createElement('a'),
-            tn = document.createTextNode('WT');
-      whobut.appendChild(tn);
-      whobut.setAttribute('href', whotwi);
-      whobut.setAttribute('target', '_blank');
+// Create link
+const whobut = document.createElement('a'),
+      tn = document.createTextNode('WT');
+whobut.appendChild(tn);
+whobut.setAttribute('href', whotwi);
+whobut.setAttribute('target', '_blank');
 
-      // place link
-      buttonbox.prepend(whobut);
-}
+// place link
+buttonbox.prepend(whobut);
